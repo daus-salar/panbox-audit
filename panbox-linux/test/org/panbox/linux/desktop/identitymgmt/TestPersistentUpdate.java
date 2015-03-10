@@ -39,10 +39,9 @@ import java.security.cert.X509Certificate;
 import java.util.Arrays;
 import java.util.Collection;
 
-import org.junit.After;
-import org.junit.AfterClass;
+
 import org.junit.Before;
-import org.junit.BeforeClass;
+
 import org.junit.Test;
 import org.panbox.core.crypto.CryptCore;
 import org.panbox.core.identitymgmt.AbstractAddressbookManager;
@@ -60,22 +59,16 @@ public class TestPersistentUpdate extends AbstractTest {
 
 	// private static int testCounter = 0;
 
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
 
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
+
+	
 
 	@Before
 	public void setUp() throws Exception {
 		setupSettings();
 	}
 
-	@After
-	public void tearDown() throws Exception {
-	}
+
 
 	@Test
 	public void test() {

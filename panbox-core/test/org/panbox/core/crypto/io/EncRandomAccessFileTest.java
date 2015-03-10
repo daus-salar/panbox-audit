@@ -57,7 +57,6 @@ import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
@@ -94,9 +93,7 @@ public abstract class EncRandomAccessFileTest {
 	/**
 	 * @throws java.lang.Exception
 	 */
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
+
 
 	abstract int getBlockSize() throws NoSuchAlgorithmException,
 			NoSuchPaddingException, NoSuchProviderException;

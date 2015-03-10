@@ -45,9 +45,7 @@ import javax.crypto.ShortBufferException;
 import javax.crypto.spec.SecretKeySpec;
 
 import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 import org.panbox.PanboxConstants;
@@ -123,13 +121,9 @@ public class TestCreateCryptFile extends AbstractTest {
 		}
 	}
 
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
 
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
+
+	
 
 	TemporaryFolder folder;
 

@@ -26,10 +26,7 @@
  */
 package org.panbox.desktop.linux.crashhander;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
+
 import org.junit.Test;
 import org.panbox.desktop.linux.ProcessHandler;
 
@@ -47,21 +44,13 @@ public class ChrashHandlerTest extends TestCase{
 	String ps_aux_line_1 = "spychal+  2290  0.0  0.2 308784  8444 ?        Sl   15:28   0:00 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-1.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libsystray.so 6 16777261 systray Notification Area Area where notification ico";
 	String ps_aux_line_2 = "spychal+  4711  0.0  0.2 308784  8444 ?        Sl   15:28   0:00 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-1.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libsystray.so 6 16777261 systray Notification Area Area where notification ico";
 	
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
 
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
 
-	@Before
-	public void setUp() throws Exception {
-	}
+	
 
-	@After
-	public void tearDown() throws Exception {
-	}
+	
+
+
 
 	@Test
 	public void testGetPID() {

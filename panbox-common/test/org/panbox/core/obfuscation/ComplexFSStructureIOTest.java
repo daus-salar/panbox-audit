@@ -33,10 +33,7 @@ import java.io.IOException;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.rules.TemporaryFolder;
 import org.panbox.core.crypto.AbstractObfuscatorFactory;
@@ -57,13 +54,6 @@ public class ComplexFSStructureIOTest extends AbstractTest {
 	@Rule
 	public TemporaryFolder testdir = new TemporaryFolder();
 
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
-
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
 
 	@Before
 	public void setUp() throws Exception {
@@ -76,10 +66,6 @@ public class ComplexFSStructureIOTest extends AbstractTest {
 				| IllegalAccessException e1) {
 			e1.printStackTrace();
 		}
-	}
-
-	@After
-	public void tearDown() throws Exception {
 	}
 
 	/**
