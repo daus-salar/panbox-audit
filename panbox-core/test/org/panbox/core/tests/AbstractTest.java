@@ -92,33 +92,4 @@ public abstract class AbstractTest {
 		}
 	}
 	
-	protected File createTestFile(File dir, String fileName, String content) throws IOException
-	{
-		File file = new File(dir.getAbsolutePath() + File.separator + fileName);
-		if (!file.createNewFile()) {
-			fail("Can't create test file.");
-		}
-		
-		FileOutputStream fos = new FileOutputStream(file);
-		fos.write(content.getBytes());
-		fos.close();
-		
-		return file;		
-	}
-	
-	protected byte[] createSha1(File file) throws Exception  {
-	    MessageDigest digest = MessageDigest.getInstance("SHA-1");
-	    InputStream fis = new FileInputStream(file);
-	    int n = 0;
-	    byte[] buffer = new byte[8192];
-	    while (n != -1) {
-	        n = fis.read(buffer);
-	        if (n > 0) {
-	            digest.update(buffer, 0, n);
-	        }
-	    }
-	    fis.close();
-	    return digest.digest();
-	}
-	
 }
