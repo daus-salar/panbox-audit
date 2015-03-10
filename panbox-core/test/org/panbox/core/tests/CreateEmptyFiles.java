@@ -42,8 +42,8 @@ import org.junit.rules.TemporaryFolder;
 public class CreateEmptyFiles {
 
 	@Rule
-    public TemporaryFolder temporyFiles= new TemporaryFolder();
-	
+	public TemporaryFolder temporyFiles= new TemporaryFolder();
+
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}
@@ -62,26 +62,21 @@ public class CreateEmptyFiles {
 
 	@Test
 	public void test() throws IOException {
-//		fail("Not yet implemented");
-		
+		//		fail("Not yet implemented");
+
 		int numFiles = 1024 * 10 * 3;
-		
+
 		File dir = temporyFiles.newFolder();
-		
+
 		assertTrue("Temporay directory not created",dir.exists() );
-		
+
 		for(int i=0; i<numFiles; i++)
 		{
 			File f = new File(dir.getAbsolutePath() + File.separator + "filename" + i);
-			try {
-				f.createNewFile();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			f.createNewFile();
 		}
-		
-		
+
+
 	}
 
 }
