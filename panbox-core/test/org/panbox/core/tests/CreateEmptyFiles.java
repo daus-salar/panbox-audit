@@ -26,6 +26,8 @@
  */
 package org.panbox.core.tests;
 
+import static org.junit.Assert.assertTrue;
+
 import java.io.File;
 import java.io.IOException;
 
@@ -33,10 +35,15 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.TemporaryFolder;
 
 public class CreateEmptyFiles {
 
+	@Rule
+    public TemporaryFolder temporyFiles= new TemporaryFolder();
+	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}
@@ -54,22 +61,14 @@ public class CreateEmptyFiles {
 	}
 
 	@Test
-	public void test() {
+	public void test() throws IOException {
 //		fail("Not yet implemented");
 		
 		int numFiles = 1024 * 10 * 3;
 		
-		File dir = new File("/home/triller/tmp/files");
+		File dir = temporyFiles.newFolder();
 		
-		if(!dir.exists())
-		{
-			dir.mkdirs();
-		}
-		else
-		{
-			//cleanup
-			dir.delete();
-		}
+		assertTrue("Temporay directory not created",dir.exists() );
 		
 		for(int i=0; i<numFiles; i++)
 		{
